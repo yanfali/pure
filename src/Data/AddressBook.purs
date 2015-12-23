@@ -30,3 +30,9 @@ showAddress :: Address -> String
 showAddress addr = addr.street ++ ", " ++
                    addr.city ++ ", " ++
                    addr.state
+
+emptyBook :: AddressBook
+emptyBook = empty
+
+insertEntry :: Entry -> AddressBook -> AddressBook
+insertEntry = Cons 
