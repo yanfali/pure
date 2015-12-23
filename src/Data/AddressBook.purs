@@ -44,3 +44,7 @@ findEntry firstName lastName book = head $ filter filterEntry book
 
 printEntry firstName lastName book = showEntry <$> findEntry firstName lastName book
 
+findEntryByStreet street book = head $ filter filterEntry book
+  where
+  filterEntry :: Entry -> Boolean
+  filterEntry entry = entry.address.street == street
